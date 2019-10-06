@@ -1,16 +1,11 @@
 version: '3'
 services:
   web:
-    build:
-      context: ./web
-      dockerfile: docker/Dockerfile
+    image: prestashop/prestashop:1.7-7.2-apache
     ports:
       - 80:80
     volumes:
-      - ./web/docker/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf
-      - ./web/docker/nginx.conf:/etc/nginx/sites-enabled/nginx.conf
-      - ./web/logs:/var/www/logs
-      - ./web/src:/var/www/html
+      - ./src:/var/www/html
 
   mysql:
     image: mariadb:10.3.2

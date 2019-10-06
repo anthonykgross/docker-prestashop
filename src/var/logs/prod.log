@@ -1,0 +1,4 @@
+[2019-10-06 18:26:16] app.ERROR: Class "AdminLinkWidgetController" not found in controllers/admin [] []
+[2019-10-06 18:26:22] app.INFO: Exporting mail with theme modern for language Français (French) [] []
+[2019-10-06 18:26:22] app.INFO: Core output folder: /var/www/html/mails [] []
+[2019-10-06 18:26:22] app.INFO: Modules output folder: /var/www/html/modules/ [] []
