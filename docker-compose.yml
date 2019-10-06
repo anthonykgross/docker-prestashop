@@ -1,0 +1,23 @@
+version: '3'
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: docker/Dockerfile
+    ports:
+      - 80:80
+    volumes:
+      - ./web/docker/supervisor.conf:/etc/supervisor/conf.d/supervisor.conf
+      - ./web/docker/nginx.conf:/etc/nginx/sites-enabled/nginx.conf
+      - ./web/logs:/var/www/logs
+      - ./web/src:/var/www/html
+
+  mysql:
+    image: mariadb:10.3.2
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prestashop
+    ports:
+      - 3306:3306

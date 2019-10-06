@@ -1,0 +1,5 @@
+.idea
+*/logs/*
+!*/logs/.gitkeep
+docker/mysql
+docker/mongodb
